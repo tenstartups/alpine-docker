@@ -1,5 +1,5 @@
-ifeq ($(DOCKER_ARCH),arm)
-	DOCKER_IMAGE_NAME := tenstartups/alpine:arm
+ifeq ($(DOCKER_ARCH),armhf)
+	DOCKER_IMAGE_NAME := tenstartups/alpine:armhf
 else
 	DOCKER_IMAGE_NAME := tenstartups/alpine:latest
 endif
