@@ -16,7 +16,7 @@ ENV \
 
 # Install packages.
 RUN \
-  apk --update add bash coreutils curl figlet nano tar wget && \
+  apk --update add bash coreutils curl figlet nano procps tar wget && \
   rm -rf /var/cache/apk/*
 
 # Set the default command.
