@@ -14,7 +14,8 @@ MAINTAINER Marc Lennox <marc.lennox@gmail.com>
 ENV \
   TERM=xterm-color
 
-RUN [ "cross-build-start" ]
+# Start the qemu cross build system
+RUN ["cross-build-start"]
 
 # Install packages.
 RUN \
