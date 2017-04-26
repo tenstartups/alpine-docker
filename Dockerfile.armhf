@@ -6,13 +6,15 @@
 # http://github.com/tenstartups/alpine-docker
 #
 
-FROM orax/alpine-armhf:latest
+FROM gewoonmaarten/alpine-arm-qemu:latest
 
 MAINTAINER Marc Lennox <marc.lennox@gmail.com>
 
 # Set environment variables.
 ENV \
   TERM=xterm-color
+
+RUN [ "cross-build-start" ]
 
 # Install packages.
 RUN \

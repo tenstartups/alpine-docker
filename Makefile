@@ -1,6 +1,7 @@
 ifeq ($(DOCKER_ARCH),armhf)
 	DOCKER_IMAGE_NAME := tenstartups/alpine:armhf
 else
+	DOCKER_ARCH := x64
 	DOCKER_IMAGE_NAME := tenstartups/alpine:latest
 endif
 
