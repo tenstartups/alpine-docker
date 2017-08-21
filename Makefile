@@ -6,9 +6,11 @@ else
 endif
 
 build: Dockerfile.$(DOCKER_ARCH)
-	docker build --file Dockerfile.$(DOCKER_ARCH) --tag $(DOCKER_IMAGE_NAME) .
+	docker run --rm --privileged multiarch/qemu-user-static:register --reset
+	docker build --pull --file Dockerfile.$(DOCKER_ARCH) --tag $(DOCKER_IMAGE_NAME) .
 
 clean_build: Dockerfile.$(DOCKER_ARCH)
+	docker run --rm --privileged multiarch/qemu-user-static:register --reset
 	docker build --no-cache --pull --file Dockerfile.$(DOCKER_ARCH) --tag $(DOCKER_IMAGE_NAME) .
 
 run: build
