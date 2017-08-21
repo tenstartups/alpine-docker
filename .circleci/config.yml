@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run: curl https://get.docker.com | sh
+      - run: docker run --rm --privileged multiarch/qemu-user-static:register --reset
+      - run: docker build -t tenstartups/alpine:armhf -f "Dockerfile.armhf" .
