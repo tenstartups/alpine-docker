@@ -6,9 +6,9 @@
 # http://github.com/tenstartups/alpine-docker
 #
 
-FROM alpine:latest
+FROM alpine:3.6
 
-MAINTAINER Marc Lennox <marc.lennox@gmail.com>
+LABEL maintainer="Marc Lennox <marc.lennox@gmail.com>"
 
 # Set environment variables.
 ENV \

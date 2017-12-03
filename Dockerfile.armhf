@@ -1,5 +1,5 @@
 #
-# Alpine linux docker image for Raspberry pi
+# Alpine linux docker image
 #
 # A minimal base image based on Alpine Linux with useful packages and tools.
 #
@@ -8,7 +8,7 @@
 
 FROM resin/armhf-alpine:latest
 
-MAINTAINER Marc Lennox <marc.lennox@gmail.com>
+LABEL maintainer="Marc Lennox <marc.lennox@gmail.com>"
 
 # Set environment variables.
 ENV \
