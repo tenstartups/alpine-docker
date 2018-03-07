@@ -6,7 +6,7 @@
 # http://github.com/tenstartups/alpine-docker
 #
 
-FROM alpine:3.6
+FROM alpine:latest
 
 LABEL maintainer="Marc Lennox <marc.lennox@gmail.com>"
 
