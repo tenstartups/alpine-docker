@@ -10,11 +10,11 @@ FROM arm32v6/alpine:latest
 
 LABEL maintainer="Marc Lennox <marc.lennox@gmail.com>"
 
+COPY qemu-arm-static /usr/bin/
+
 # Set environment variables.
 ENV \
   TERM=xterm-color
-
-COPY qemu-arm-static /usr/bin/
 
 # Install packages.
 RUN \
